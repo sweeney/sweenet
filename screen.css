@@ -6,6 +6,13 @@ body {
 	color : #444;
 }
 
+#topbar {
+	height : 10px;
+	margin : 0 1ex;
+	font-size : 180px;
+	background : #02aaa2;
+}
+
 #hero {
 	position : relative;
 	overflow : hidden;
