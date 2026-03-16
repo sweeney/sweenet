@@ -22,7 +22,8 @@ h1 {
 	font-weight : normal;
 	font-size : 180px;
 	margin : 300px 1ex 0 1ex;
-	padding : 1ex 0;
+	padding : 1ex;
+	min-width : fit-content;
 	color : #fff;
 	background : #02aaa2;
 	text-align : center;
