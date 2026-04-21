@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>swee.net — Brand Style Guide</title>
+	<style>
+		*, *::before, *::after { box-sizing: border-box; }
+
+		:root {
+			--teal:        #02aaa2;
+			--teal-dark:   #017f79;
+			--teal-light:  #b2e8e6;
+			--teal-muted:  #e0f5f4;
+			--ink:         #222;
+			--body:        #444;
+			--muted:       #888;
+			--rule:        #ccc;
+			--bg:          #eee;
+			--white:       #fff;
+			--font-serif:  'Georgia', 'Times New Roman', serif;
+			--font-mono:   'Menlo', 'Courier New', monospace;
+		}
+
+		html { font-size: 16px; }
+
+		body {
+			margin: 0;
+			padding: 0;
+			font: 1em/1.6 var(--font-serif);
+			background: var(--bg);
+			color: var(--body);
+		}
+
+		/* ── Page header ── */
+		.page-topbar {
+			height: 8px;
+			background: var(--teal);
+			margin: 0 1ex;
+		}
+
+		.page-header {
+			background: var(--teal);
+			color: var(--white);
+			padding: 3rem 4rem;
+		}
+
+		.page-header h1 {
+			font-weight: normal;
+			font-size: 3.5rem;
+			margin: 0 0 0.25em;
+			line-height: 1;
+			letter-spacing: -0.01em;
+		}
+
+		.page-header p {
+			margin: 0;
+			opacity: 0.85;
+			font-size: 1rem;
+		}
+
+		/* ── Layout ── */
+		.container {
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 3rem 2rem 6rem;
+		}
+
+		/* ── Section ── */
+		.section {
+			margin-bottom: 4rem;
+		}
+
+		.section-label {
+			font: 0.7rem/1 var(--font-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.12em;
+			color: var(--muted);
+			border-bottom: 1px solid var(--rule);
+			padding-bottom: 0.75rem;
+			margin-bottom: 2rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			font-weight: normal;
+			color: var(--ink);
+			margin: 0 0 0.5rem;
+		}
+
+		h3 {
+			font-size: 1rem;
+			font-weight: normal;
+			color: var(--muted);
+			margin: 0 0 1rem;
+		}
+
+		/* ── Colour palette ── */
+		.palette {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+
+		.swatch {
+			width: 160px;
+		}
+
+		.swatch-block {
+			height: 80px;
+			border-radius: 4px;
+			margin-bottom: 0.6rem;
+		}
+
+		.swatch-name {
+			font: 0.8rem/1.3 var(--font-mono);
+			color: var(--ink);
+			display: block;
+		}
+
+		.swatch-hex {
+			font: 0.75rem/1.3 var(--font-mono);
+			color: var(--muted);
+			display: block;
+		}
+
+		.swatch-use {
+			font-size: 0.75rem;
+			color: var(--muted);
+			display: block;
+			margin-top: 0.2em;
+		}
+
+		/* ── Typography scale ── */
+		.type-row {
+			display: flex;
+			align-items: baseline;
+			gap: 2rem;
+			border-bottom: 1px solid var(--rule);
+			padding: 1.25rem 0;
+		}
+
+		.type-meta {
+			width: 140px;
+			flex-shrink: 0;
+			font: 0.7rem/1.4 var(--font-mono);
+			color: var(--muted);
+		}
+
+		.type-specimen { flex: 1; }
+
+		.t-display {
+			font: normal 5rem/1 var(--font-serif);
+			color: var(--ink);
+			letter-spacing: -0.02em;
+		}
+
+		.t-heading-1 {
+			font: normal 2.5rem/1.1 var(--font-serif);
+			color: var(--ink);
+		}
+
+		.t-heading-2 {
+			font: normal 1.5rem/1.2 var(--font-serif);
+			color: var(--ink);
+		}
+
+		.t-heading-3 {
+			font: normal 1.125rem/1.3 var(--font-serif);
+			color: var(--ink);
+		}
+
+		.t-body {
+			font: 1rem/1.6 var(--font-serif);
+			color: var(--body);
+		}
+
+		.t-small {
+			font: 0.875rem/1.5 var(--font-serif);
+			color: var(--body);
+		}
+
+		.t-caption {
+			font: 0.75rem/1.4 var(--font-mono);
+			color: var(--muted);
+			letter-spacing: 0.02em;
+		}
+
+		.t-label {
+			font: 0.7rem/1 var(--font-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.12em;
+			color: var(--muted);
+		}
+
+		/* ── Logo / wordmark ── */
+		.logo-row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			align-items: center;
+		}
+
+		.logo-specimen {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+
+		.logo-specimen span {
+			font: 0.7rem/1 var(--font-mono);
+			color: var(--muted);
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		.wordmark {
+			font: normal 3rem/1 var(--font-serif);
+			letter-spacing: -0.01em;
+		}
+
+		.wordmark-on-teal {
+			background: var(--teal);
+			color: var(--white);
+			padding: 0.4em 0.6em;
+		}
+
+		.wordmark-on-dark {
+			background: var(--ink);
+			color: var(--white);
+			padding: 0.4em 0.6em;
+		}
+
+		.wordmark-on-bg {
+			color: var(--teal);
+		}
+
+		/* ── Topbar strip ── */
+		.topbar-demo {
+			background: var(--white);
+			border-radius: 4px;
+			overflow: hidden;
+			border: 1px solid var(--rule);
+		}
+
+		.topbar-strip {
+			height: 8px;
+			background: var(--teal);
+			margin: 0 1ex;
+		}
+
+		.topbar-content {
+			padding: 1.5rem;
+			font-size: 0.9rem;
+			color: var(--muted);
+		}
+
+		/* ── Motion / Platform ── */
+		.platform-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 1.5rem;
+		}
+
+		.platform-card {
+			background: var(--white);
+			border-radius: 6px;
+			padding: 1.5rem;
+			border: 1px solid var(--rule);
+		}
+
+		.platform-card h4 {
+			font: 0.7rem/1 var(--font-mono);
+			text-transform: uppercase;
+			letter-spacing: 0.12em;
+			color: var(--teal);
+			margin: 0 0 1rem;
+		}
+
+		.platform-card ul {
+			margin: 0;
+			padding: 0 0 0 1.2em;
+			font-size: 0.875rem;
+			line-height: 1.7;
+			color: var(--body);
+		}
+
+		/* ── UI Patterns ── */
+		.pattern-row {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			align-items: flex-start;
+			margin-bottom: 1.5rem;
+		}
+
+		.btn {
+			display: inline-block;
+			font: 0.875rem/1 var(--font-serif);
+			padding: 0.6em 1.2em;
+			border-radius: 3px;
+			border: none;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.btn-primary   { background: var(--teal); color: var(--white); }
+		.btn-secondary { background: transparent; color: var(--teal); border: 1.5px solid var(--teal); }
+		.btn-ghost     { background: transparent; color: var(--body); border: 1.5px solid var(--rule); }
+
+		.input-demo {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+
+		.input-demo input {
+			font: 1rem/1 var(--font-serif);
+			padding: 0.55em 0.75em;
+			border: 1.5px solid var(--rule);
+			border-radius: 3px;
+			background: var(--white);
+			color: var(--ink);
+			outline: none;
+			width: 260px;
+		}
+
+		.input-demo input:focus {
+			border-color: var(--teal);
+		}
+
+		.input-demo label {
+			font: 0.75rem/1 var(--font-mono);
+			color: var(--muted);
+		}
+
+		/* ── Spacing scale ── */
+		.spacing-row {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.spacing-block {
+			background: var(--teal-light);
+			height: 1rem;
+			border-radius: 2px;
+			flex-shrink: 0;
+		}
+
+		.spacing-label {
+			font: 0.75rem/1 var(--font-mono);
+			color: var(--muted);
+			width: 200px;
+		}
+
+		/* ── Principles ── */
+		.principles {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1.5rem;
+		}
+
+		.principle {
+			border-left: 3px solid var(--teal);
+			padding-left: 1rem;
+		}
+
+		.principle h4 {
+			font: normal 1rem/1.2 var(--font-serif);
+			color: var(--ink);
+			margin: 0 0 0.4rem;
+		}
+
+		.principle p {
+			font-size: 0.875rem;
+			color: var(--muted);
+			margin: 0;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+
+<div class="page-topbar"></div>
+
+<header class="page-header">
+	<h1>swee.net</h1>
+	<p>Brand Style Guide — Web · iOS · macOS &nbsp;·&nbsp; <a href="BRAND.md" style="color:rgba(255,255,255,0.7);font-size:0.8rem;font-family:Menlo,monospace;">BRAND.md</a></p>
+</header>
+
+<div class="container">
+
+	<!-- PRINCIPLES -->
+	<section class="section">
+		<p class="section-label">Design principles</p>
+		<div class="principles">
+			<div class="principle">
+				<h4>Restrained</h4>
+				<p>One accent colour. Generous whitespace. Nothing decorative that isn't doing work.</p>
+			</div>
+			<div class="principle">
+				<h4>Warm serif</h4>
+				<p>Georgia grounds the brand in long-form reading. Not a tech sans — a personal, considered voice.</p>
+			</div>
+			<div class="principle">
+				<h4>Teal as signal</h4>
+				<p>The brand teal is rare and intentional — it marks structure and identity, not decoration.</p>
+			</div>
+			<div class="principle">
+				<h4>Monochrome motifs</h4>
+				<p>Imagery (the swallow) runs desaturated. Colour lives in the brand, not photography.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- COLOUR -->
+	<section class="section">
+		<p class="section-label">Colour</p>
+		<div class="palette">
+			<div class="swatch">
+				<div class="swatch-block" style="background:#02aaa2;"></div>
+				<span class="swatch-name">Brand Teal</span>
+				<span class="swatch-hex">#02aaa2</span>
+				<span class="swatch-use">Primary identity; headers, topbar, active state</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#017f79;"></div>
+				<span class="swatch-name">Teal Dark</span>
+				<span class="swatch-hex">#017f79</span>
+				<span class="swatch-use">Hover, pressed, focus ring</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#b2e8e6; border:1px solid #ddd;"></div>
+				<span class="swatch-name">Teal Light</span>
+				<span class="swatch-hex">#b2e8e6</span>
+				<span class="swatch-use">Subtle tints, selection highlights</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#e0f5f4; border:1px solid #ddd;"></div>
+				<span class="swatch-name">Teal Muted</span>
+				<span class="swatch-hex">#e0f5f4</span>
+				<span class="swatch-use">Backgrounds, table rows, callouts</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#222;"></div>
+				<span class="swatch-name">Ink</span>
+				<span class="swatch-hex">#222</span>
+				<span class="swatch-use">Display text, headings</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#444;"></div>
+				<span class="swatch-name">Body</span>
+				<span class="swatch-hex">#444</span>
+				<span class="swatch-use">Body copy, default text</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#888;"></div>
+				<span class="swatch-name">Muted</span>
+				<span class="swatch-hex">#888</span>
+				<span class="swatch-use">Labels, captions, secondary text</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#ccc; border:1px solid #ddd;"></div>
+				<span class="swatch-name">Rule</span>
+				<span class="swatch-hex">#ccc</span>
+				<span class="swatch-use">Dividers, borders, input strokes</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#eee; border:1px solid #ddd;"></div>
+				<span class="swatch-name">Background</span>
+				<span class="swatch-hex">#eee</span>
+				<span class="swatch-use">Page background, secondary surfaces</span>
+			</div>
+			<div class="swatch">
+				<div class="swatch-block" style="background:#fff; border:1px solid #ddd;"></div>
+				<span class="swatch-name">White</span>
+				<span class="swatch-hex">#ffffff</span>
+				<span class="swatch-use">Cards, modals, text on teal</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- TYPOGRAPHY -->
+	<section class="section">
+		<p class="section-label">Typography</p>
+		<p style="font-size:0.875rem;color:#888;margin:-1rem 0 2rem;">
+			Primary typeface: <strong style="color:#444;">Georgia</strong> (serif) — fall back to Times New Roman, then generic serif.<br>
+			Monospaced: <strong style="color:#444;">Menlo</strong> — fall back to Courier New, then generic monospace.<br>
+			No weight other than <em>normal</em> (400) and <em>bold</em> (700) are used. Display headings always normal weight.
+		</p>
+
+		<div class="type-row">
+			<div class="type-meta">Display<br>5rem · normal<br>Georgia</div>
+			<div class="type-specimen"><span class="t-display">swee.net</span></div>
+		</div>
+		<div class="type-row">
+			<div class="type-meta">Heading 1<br>2.5rem · normal<br>Georgia</div>
+			<div class="type-specimen"><span class="t-heading-1">A personal corner of the internet</span></div>
+		</div>
+		<div class="type-row">
+			<div class="type-meta">Heading 2<br>1.5rem · normal<br>Georgia</div>
+			<div class="type-specimen"><span class="t-heading-2">Projects and writing</span></div>
+		</div>
+		<div class="type-row">
+			<div class="type-meta">Heading 3<br>1.125rem · normal<br>Georgia</div>
+			<div class="type-specimen"><span class="t-heading-3">Recent notes</span></div>
+		</div>
+		<div class="type-row">
+			<div class="type-meta">Body<br>1rem · 1.6 leading<br>Georgia</div>
+			<div class="type-specimen"><span class="t-body">The barn swallow (<em>Hirundo rustica</em>) is the most widespread species of swallow in the world. It is a distinctive passerine bird with blue upperparts and a long, deeply forked tail.</span></div>
+		</div>
+		<div class="type-row">
+			<div class="type-meta">Small<br>0.875rem · 1.5 leading<br>Georgia</div>
+			<div class="type-specimen"><span class="t-small">Published 22 April 2026 · 4 min read</span></div>
+		</div>
+		<div class="type-row">
+			<div class="type-meta">Caption / Code<br>0.75rem · Menlo</div>
+			<div class="type-specimen"><span class="t-caption">background: #02aaa2; &nbsp;·&nbsp; font-family: Georgia, serif;</span></div>
+		</div>
+		<div class="type-row">
+			<div class="type-meta">Label<br>0.7rem · Menlo<br>uppercase · tracked</div>
+			<div class="type-specimen"><span class="t-label">Design principles</span></div>
+		</div>
+	</section>
+
+	<!-- WORDMARK -->
+	<section class="section">
+		<p class="section-label">Wordmark &amp; identity</p>
+		<p style="font-size:0.875rem;color:#888;margin:-1rem 0 2rem;">The wordmark is always the site name in Georgia at normal weight. Never bold, never all-caps, never altered.</p>
+		<div class="logo-row">
+			<div class="logo-specimen">
+				<div class="wordmark wordmark-on-teal">swee.net</div>
+				<span>On teal — primary</span>
+			</div>
+			<div class="logo-specimen">
+				<div class="wordmark wordmark-on-dark">swee.net</div>
+				<span>On ink — dark contexts</span>
+			</div>
+			<div class="logo-specimen">
+				<div class="wordmark wordmark-on-bg">swee.net</div>
+				<span>Teal on light bg</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- TOPBAR STRIP -->
+	<section class="section">
+		<p class="section-label">Topbar strip</p>
+		<p style="font-size:0.875rem;color:#888;margin:-1rem 0 1.5rem;">A thin teal strip inset by <code>1ex</code> at the very top of every app surface. It is the lightest possible brand mark — a seam rather than a banner.</p>
+		<div class="topbar-demo">
+			<div class="topbar-strip"></div>
+			<div class="topbar-content">Application content begins here. The strip height is 8–10px across all platforms.</div>
+		</div>
+	</section>
+
+	<!-- SPACING -->
+	<section class="section">
+		<p class="section-label">Spacing scale</p>
+		<p style="font-size:0.875rem;color:#888;margin:-1rem 0 1.5rem;">Based on a 4px base unit. Use multiples of 4px for all padding, margin, and gap values.</p>
+		<div class="spacing-row"><div class="spacing-block" style="width:4px;"></div><span class="spacing-label">4px &nbsp;— xs, icon padding, tight gaps</span></div>
+		<div class="spacing-row"><div class="spacing-block" style="width:8px;"></div><span class="spacing-label">8px &nbsp;— sm, inline spacing</span></div>
+		<div class="spacing-row"><div class="spacing-block" style="width:16px;"></div><span class="spacing-label">16px — md, component padding</span></div>
+		<div class="spacing-row"><div class="spacing-block" style="width:24px;"></div><span class="spacing-label">24px — lg, section gaps</span></div>
+		<div class="spacing-row"><div class="spacing-block" style="width:48px;"></div><span class="spacing-label">48px — xl, page sections</span></div>
+		<div class="spacing-row"><div class="spacing-block" style="width:96px;"></div><span class="spacing-label">96px — 2xl, hero margins</span></div>
+	</section>
+
+	<!-- UI PATTERNS -->
+	<section class="section">
+		<p class="section-label">UI patterns</p>
+		<h3>Buttons</h3>
+		<div class="pattern-row">
+			<button class="btn btn-primary">Primary</button>
+			<button class="btn btn-secondary">Secondary</button>
+			<button class="btn btn-ghost">Ghost</button>
+		</div>
+		<h3>Text input</h3>
+		<div class="input-demo">
+			<label>Email address</label>
+			<input type="email" placeholder="martin@sweeney.io">
+		</div>
+	</section>
+
+	<!-- PLATFORM NOTES -->
+	<section class="section">
+		<p class="section-label">Platform notes</p>
+		<div class="platform-grid">
+			<div class="platform-card">
+				<h4>Web</h4>
+				<ul>
+					<li>Georgia from system stack — no web font requests</li>
+					<li>Background <code>#eee</code>, cards <code>#fff</code></li>
+					<li>Topbar strip: <code>8px</code>, inset <code>1ex</code></li>
+					<li>Max content width: 880px, centred</li>
+					<li>Base font: <code>1rem / 1.6</code></li>
+				</ul>
+			</div>
+			<div class="platform-card">
+				<h4>iOS</h4>
+				<ul>
+					<li>Use system Georgia (always available)</li>
+					<li>Map <code>#eee</code> → <code>systemGroupedBackground</code></li>
+					<li>Map <code>#fff</code> → <code>secondarySystemGroupedBackground</code></li>
+					<li>Teal accent: set app tint to <code>#02aaa2</code></li>
+					<li>Topbar strip: thin view pinned to safe area top</li>
+					<li>Respect Dynamic Type — scale Georgia sizes relatively</li>
+				</ul>
+			</div>
+			<div class="platform-card">
+				<h4>macOS</h4>
+				<ul>
+					<li>Georgia available system-wide</li>
+					<li>Window background: <code>NSColor.windowBackgroundColor</code></li>
+					<li>App accent colour: <code>#02aaa2</code> in Assets.xcassets</li>
+					<li>Topbar strip: thin view at top of main window content</li>
+					<li>Prefer SwiftUI <code>.font(.custom("Georgia", ...))</code></li>
+					<li>Use <code>NSColor(calibratedRed:0.01 green:0.67 blue:0.64 alpha:1)</code> for teal</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- IMAGERY -->
+	<section class="section">
+		<p class="section-label">Imagery</p>
+		<div style="display:flex;gap:3rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:2rem;">
+			<img src="swallow-mono.png" alt="Hirundo rustica — barn swallow, monochrome" style="width:220px;height:auto;flex-shrink:0;">
+			<div style="display:flex;flex-direction:column;gap:1.5rem;padding-top:0.25rem;">
+				<div class="principle">
+					<h4>Swallow motif</h4>
+					<p>The barn swallow (<em>Hirundo rustica</em>) is the site mascot. Always rendered monochrome — never in full colour.</p>
+				</div>
+				<div class="principle">
+					<h4>Monochrome photography</h4>
+					<p>Any photography used alongside brand elements should be desaturated. Colour is reserved for the brand palette.</p>
+				</div>
+				<div class="principle">
+					<h4>Negative space</h4>
+					<p>Imagery is given room to breathe. Avoid cropping tightly or layering images with heavy overlays.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+</body>
+</html>
