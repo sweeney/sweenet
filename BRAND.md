@@ -12,6 +12,15 @@ Machine-readable companion to [styleguide.html](styleguide.html). Use this when 
 
 ---
 
+## Design Principles
+
+- **Restrained** — one accent colour, generous whitespace, nothing decorative that isn't doing work
+- **Warm serif** — Georgia grounds the brand in long-form reading; not a tech sans, a personal considered voice
+- **Teal as signal** — the brand teal is rare and intentional; it marks structure and identity, not decoration
+- **Monochrome motifs** — imagery (the swallow) runs desaturated; colour lives in the brand, not photography
+
+---
+
 ## Colours
 
 | Token | Hex | Usage |
@@ -120,7 +129,7 @@ Approved treatments:
 - Map `#eee` → `systemGroupedBackground`
 - Map `#fff` → `secondarySystemGroupedBackground`
 - Use `UIFont(name: "Georgia", size: ...)` — available on all iOS versions
-- Topbar strip: thin view pinned below the safe area top
+- Topbar strip: thin view pinned to safe area top
 - Scale font sizes with Dynamic Type using relative sizing
 
 **macOS**
