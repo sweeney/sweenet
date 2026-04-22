@@ -132,9 +132,66 @@ Approved treatments:
 
 ---
 
+## Icons & Favicons
+
+The icon is a single serif letter on a plain white square. No teal, no decoration — the brand colour lives in the surrounding UI, not inside the icon.
+
+**Design rules:**
+- Letter: "s" from the domain name
+- Case: lowercase for web favicon; uppercase "S" for native app icons (better legibility at small sizes)
+- Typeface: Times / Georgia, serif
+- Weight: normal for SVG favicon; heavier cut in the PNG set for small-size clarity
+- Background: white (`#fff`) — never teal, never transparent
+- Letter fills ~75% of the canvas
+- Export icons as plain squares — macOS/iOS apply corner rounding at the system level; never pre-round
+
+**Web favicon:**
+- File: `favicon.svg`
+- SVG scales to any size with no raster artefacts
+- Reference: `<link rel="icon" href="favicon.svg" type="image/svg+xml">`
+
+**macOS app icon sizes (PNG):**
+
+| File | Size | Retina use |
+|---|---|---|
+| `icons/AppIcon-16.png` | 16×16 | 1× 16pt |
+| `icons/AppIcon-32.png` | 32×32 | 2× 16pt / 1× 32pt |
+| `icons/AppIcon-64.png` | 64×64 | 2× 32pt |
+| `icons/AppIcon-128.png` | 128×128 | 1× 128pt |
+| `icons/AppIcon-256.png` | 256×256 | 2× 128pt / 1× 256pt |
+| `icons/AppIcon-512.png` | 512×512 | 2× 256pt |
+| `icons/AppIcon-1024.png` | 1024×1024 | App Store / 2× 512pt |
+
+---
+
 ## Imagery
 
 - The swallow is always monochrome — never full colour
 - Photography used alongside brand elements should be desaturated
 - Colour lives in the brand palette, not in imagery
 - Give images generous negative space; avoid tight crops and heavy overlays
+
+---
+
+## Assets & Downloads
+
+All brand assets are in the `sweeney/sweenet` GitHub repository.
+
+| File | Use | Format |
+|---|---|---|
+| `swallow-mono.png` | Hero / landscape swallow | PNG, monochrome |
+| `swallow-mono-sq.png` | Square crop (avatars, thumbnails) | PNG, monochrome |
+| `swallow.png` | Colour source — internal use only, do not publish | PNG, colour |
+| `favicon.svg` | Web favicon | SVG |
+| `icons/AppIcon-{size}.png` | macOS / iOS app icon set | PNG, 16–1024px |
+
+**Download a single file:**
+```
+curl -O https://raw.githubusercontent.com/sweeney/sweenet/main/swallow-mono.png
+curl -O https://raw.githubusercontent.com/sweeney/sweenet/main/icons/AppIcon-1024.png
+```
+
+**Clone everything:**
+```
+git clone https://github.com/sweeney/sweenet
+```

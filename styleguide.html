@@ -545,6 +545,69 @@
 		</div>
 	</section>
 
+	<!-- ICONS & FAVICONS -->
+	<section class="section">
+		<p class="section-label">Icons &amp; favicons</p>
+		<p style="font-size:0.875rem;color:#888;margin:-1rem 0 2rem;">The icon system uses a single serif letter on a plain white square — no teal, no decoration. The letter carries the brand through typeface alone.</p>
+
+		<div style="display:flex;flex-wrap:wrap;gap:3rem;align-items:flex-start;margin-bottom:2.5rem;">
+
+			<div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;">
+				<div style="width:64px;height:64px;border:1px solid var(--rule);border-radius:4px;overflow:hidden;">
+					<img src="favicon.svg" width="64" height="64" alt="Web favicon">
+				</div>
+				<span style="font:0.7rem/1.3 var(--font-mono);color:var(--muted);text-align:center;">favicon.svg<br>Web · SVG · 32×32</span>
+			</div>
+
+			<div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;">
+				<img src="icons/AppIcon-128.png" width="128" height="128" alt="macOS app icon 128px" style="border:1px solid var(--rule);border-radius:22px;">
+				<span style="font:0.7rem/1.3 var(--font-mono);color:var(--muted);text-align:center;">AppIcon-128.png<br>macOS · PNG</span>
+			</div>
+
+			<div style="display:flex;flex-direction:column;justify-content:flex-end;gap:0.5rem;">
+				<div style="display:flex;gap:8px;align-items:flex-end;">
+					<img src="icons/AppIcon-16.png"  width="16"  height="16"  alt="16px"  style="border:1px solid var(--rule);">
+					<img src="icons/AppIcon-32.png"  width="32"  height="32"  alt="32px"  style="border:1px solid var(--rule);">
+					<img src="icons/AppIcon-64.png"  width="64"  height="64"  alt="64px"  style="border:1px solid var(--rule);">
+				</div>
+				<span style="font:0.7rem/1.3 var(--font-mono);color:var(--muted);">16 · 32 · 64px</span>
+			</div>
+
+		</div>
+
+		<div class="principles">
+			<div class="principle">
+				<h4>Single letter</h4>
+				<p>The icon is always a lone serif "s" — it is the first letter of the domain, not an initial or abbreviation.</p>
+			</div>
+			<div class="principle">
+				<h4>Case by context</h4>
+				<p>Web favicon uses lowercase "s" (matches the wordmark). Native app icons use uppercase "S" — more legible at small sizes on a desktop.</p>
+			</div>
+			<div class="principle">
+				<h4>Black on white</h4>
+				<p>No teal in the icon. The brand colour appears in the interface around it, not inside it. White background, ink letter.</p>
+			</div>
+			<div class="principle">
+				<h4>Typeface</h4>
+				<p>Times or Georgia, normal weight for the favicon SVG. The macOS PNG set uses a heavier cut — the stroke reads clearly at 16px.</p>
+			</div>
+			<div class="principle">
+				<h4>Sizing &amp; rounding</h4>
+				<p>The letter fills ~75% of the canvas. macOS rounds corners at the system level — export icons as square PNGs, never pre-rounded.</p>
+			</div>
+			<div class="principle">
+				<h4>Web favicon</h4>
+				<p>Serve as SVG — scales to any size, no raster artefacts. Reference as <code>&lt;link rel="icon" href="favicon.svg" type="image/svg+xml"&gt;</code>.</p>
+			</div>
+		</div>
+
+		<div style="margin-top:2rem;">
+			<h3 style="font:0.7rem/1 var(--font-mono);color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin:0 0 0.75rem;">macOS icon sizes required</h3>
+			<p style="font:0.75rem/1.6 var(--font-mono);color:var(--body);margin:0;">16 · 32 · 64 · 128 · 256 · 512 · 1024px &nbsp;(1× and 2× for Retina: 16@1x = 16, 16@2x = 32, etc.)</p>
+		</div>
+	</section>
+
 	<!-- TOPBAR STRIP -->
 	<section class="section">
 		<p class="section-label">Topbar strip</p>
@@ -619,6 +682,62 @@
 					<li>Use <code>NSColor(calibratedRed:0.01 green:0.67 blue:0.64 alpha:1)</code> for teal</li>
 				</ul>
 			</div>
+		</div>
+	</section>
+
+	<!-- ASSETS -->
+	<section class="section">
+		<p class="section-label">Assets &amp; downloads</p>
+		<p style="font-size:0.875rem;color:#888;margin:-1rem 0 1.5rem;">All brand assets live in the <code>sweeney/sweenet</code> GitHub repository. Download individual files via raw GitHub URLs or clone the repo.</p>
+
+		<table style="width:100%;border-collapse:collapse;font:0.8rem/1.6 var(--font-mono);color:var(--body);">
+			<thead>
+				<tr style="border-bottom:2px solid var(--rule);">
+					<th style="text-align:left;padding:0.4rem 1rem 0.4rem 0;color:var(--muted);font-weight:normal;">File</th>
+					<th style="text-align:left;padding:0.4rem 1rem;color:var(--muted);font-weight:normal;">Use</th>
+					<th style="text-align:left;padding:0.4rem 0 0.4rem 1rem;color:var(--muted);font-weight:normal;">Format</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="border-bottom:1px solid var(--rule);">
+					<td style="padding:0.5rem 1rem 0.5rem 0;"><code>swallow-mono.png</code></td>
+					<td style="padding:0.5rem 1rem;">Hero / landscape swallow</td>
+					<td style="padding:0.5rem 0 0.5rem 1rem;">PNG, monochrome</td>
+				</tr>
+				<tr style="border-bottom:1px solid var(--rule);">
+					<td style="padding:0.5rem 1rem 0.5rem 0;"><code>swallow-mono-sq.png</code></td>
+					<td style="padding:0.5rem 1rem;">Square crop swallow (avatars, thumbnails)</td>
+					<td style="padding:0.5rem 0 0.5rem 1rem;">PNG, monochrome</td>
+				</tr>
+				<tr style="border-bottom:1px solid var(--rule);">
+					<td style="padding:0.5rem 1rem 0.5rem 0;"><code>swallow.png</code></td>
+					<td style="padding:0.5rem 1rem;">Colour source (internal use only — do not publish)</td>
+					<td style="padding:0.5rem 0 0.5rem 1rem;">PNG, colour</td>
+				</tr>
+				<tr style="border-bottom:1px solid var(--rule);">
+					<td style="padding:0.5rem 1rem 0.5rem 0;"><code>favicon.svg</code></td>
+					<td style="padding:0.5rem 1rem;">Web favicon</td>
+					<td style="padding:0.5rem 0 0.5rem 1rem;">SVG</td>
+				</tr>
+				<tr style="border-bottom:1px solid var(--rule);">
+					<td style="padding:0.5rem 1rem 0.5rem 0;"><code>icons/AppIcon-{size}.png</code></td>
+					<td style="padding:0.5rem 1rem;">macOS / iOS app icon set</td>
+					<td style="padding:0.5rem 0 0.5rem 1rem;">PNG · 16, 32, 64, 128, 256, 512, 1024px</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div style="margin-top:1.5rem;background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:1.25rem 1.5rem;">
+			<p style="font:0.7rem/1 var(--font-mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin:0 0 0.75rem;">Download a single file</p>
+			<code style="font:0.8rem/1.8 var(--font-mono);color:var(--ink);">
+				curl -O https://raw.githubusercontent.com/sweeney/sweenet/main/swallow-mono.png<br>
+				curl -O https://raw.githubusercontent.com/sweeney/sweenet/main/icons/AppIcon-1024.png
+			</code>
+		</div>
+
+		<div style="margin-top:1rem;background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:1.25rem 1.5rem;">
+			<p style="font:0.7rem/1 var(--font-mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin:0 0 0.75rem;">Clone everything</p>
+			<code style="font:0.8rem/1.8 var(--font-mono);color:var(--ink);">git clone https://github.com/sweeney/sweenet</code>
 		</div>
 	</section>
 
